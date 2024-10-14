@@ -52,7 +52,7 @@ This figure outlines the end-to-end workflow used to generate in-silico fragment
     - The sets are split into training and testing data using an 80/20 split.
 
 <!-- Figure of class distributions -->
-[Figure 2: Class Distribution](/figures/supp_fig_1_spectral_intensity_impact.png)
+![Figure 2: Class Distribution](/figures/supp_fig_1_spectral_intensity_impact.png)
 - The class distribution of the dataset is shown in Figure 2. The dataset is imbalanced, with some classes having significantly fewer examples than others. This imbalance is addressed using class weights in the ML model training.
 
 - A variety of ML models are trained and evaluated using cross-validation to determine the best-performing model for bioactivity classification.
