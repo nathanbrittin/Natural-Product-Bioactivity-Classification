@@ -37,7 +37,6 @@ This figure outlines the end-to-end workflow used to generate in-silico fragment
 
 - The fragments generated from Mass Frontier are then converted to mass spectra using python.
 
-    - The intensity of each fragment is simply a descending integer beginning at 100 for the smallest fragment and decreasing by 1 for each subsequent fragment. This does not impact the molecular fingerprint prediction done by SIRIUS 5 as shown in Supplemental Figure 1. Molecular fingerprints are generated irrespective of the intensity of the fragments, or so we have observed.
 
 ****
 
@@ -45,6 +44,12 @@ This figure outlines the end-to-end workflow used to generate in-silico fragment
 <img src="/figures/supp_fig_1_spectral_intensity_impact.png" width="800">
 
 ****
+Using 200 in-silico generated spectra, the intensity of the peaks was generated both descending in intensity for each peak and with a randomized intensity. The fingerprints were generated for all of them and then a cosine similarity score was generated between the descending and randomized verisons. The similarity between the fingerprints has a mean of 99.99% similarity with only 2 fingerprints dropping below 99% similarity. 
+
+
+The intensity of each fragment is simply a descending integer beginning at 100 for the smallest fragment and decreasing by 1 for each subsequent fragment. This does not impact the molecular fingerprint prediction done by SIRIUS 5 as shown in Supplemental Figure 1. Molecular fingerprints are generated irrespective of the intensity of the fragments, or so we have observed.
+
+
 ### 3. Molecular Fingerprint Generation:
 
 - The fragmented spectra are processed using SIRIUS 5, which converts the spectral data into molecular fingerprints (MFPs) by generating a fragmentation tree and analyzing the pattern to predict the presence of 3,778 different substructures or properties. These fingerprints act as condensed representations of the compounds' structural features.
@@ -58,7 +63,9 @@ This figure outlines the end-to-end workflow used to generate in-silico fragment
 <img src=/figures/tsne_in-silico_and_gnps.png>
 
 ****
-- The t-SNE plot shows the distribution of in-silico generated MFPs (cirlces) and GNPS MFPs (triangles) in a 2D space. The MFPs, when post-labelled with their drug classes are distincly clustered based on their classes pharmacophore, with each class clustering separately from each other. Additionally, the in-silico MFPs and the GNPS MFPs cluster very close to one another indicating that the structural information in the in-silico fingerprints is very similar to the experimental fingerprints. This separation of classes and grouping of in-silico and experimental indicated that the in-silico generated MFPs capture unique structural features that can be used for bioactivity classification of experimental data.
+The t-SNE plot above shows the distribution of in-silico generated MFPs (cirlces) and GNPS MFPs (triangles) in a 2D space. The MFPs, when post-labelled with their drug classes are distincly clustered based on their classes pharmacophore, with each class clustering separately from each other. Additionally, the in-silico MFPs and the GNPS MFPs cluster very close to one another indicating that the structural information in the in-silico fingerprints is very similar to the experimental fingerprints. This separation of classes and grouping of in-silico and experimental indicated that the in-silico generated MFPs capture unique structural features that can be used for bioactivity classification of experimental data.
+
+A few of the clusters seem to overlap in the figure however this is mostly due to the 2D representation of the data. In higher dimensions, the clusters are more distinct and separable. The reduction from the 3,778 dimnesions of the fingerprint to 2 dimensions for visualization purposes causes some overlap in the clusters.
 
 ### 4. Training Machine Learning Models:
 
@@ -97,7 +104,7 @@ Molecular Fingerprints (MFPs): Created using SIRIUS 5 and in-silico generated fr
 Tools Used: Utilizes computational tools such as SIRIUS, Mass Frontier, and scikit-learn for generating and analyzing metabolomics data.
 Bioactivity Classification: Demonstrates the utility of pharmacophore-based classification, outperforming existing methods such as CANOPUS in identifying known bioactive compounds.
 
-## Project Workflow
+<!-- ## Project Workflow
 ### 1. Data Generation:
 
 - In-silico MS/MS spectra are generated using Mass Frontier for a diverse set of natural product structures.
@@ -111,13 +118,13 @@ Bioactivity Classification: Demonstrates the utility of pharmacophore-based clas
 ### 3. Performance Metrics:
 
 - Classification models achieve over 93% accuracy, with low false-positive rates across all drug classes.
-- The models outperformed traditional classification tools, especially in predicting polyene macrolides and other antifungal drug classes.
+- The models outperformed traditional classification tools, especially in predicting polyene macrolides and other antifungal drug classes. -->
 
 ## Zenodo Repository for all training and evaluation datasets.
 https://zenodo.org/records/13921667?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6Ijc3YjJhNDZlLTU4MTctNDYwNy04OTBlLTk2MDUwOGRlMDlmOCIsImRhdGEiOnt9LCJyYW5kb20iOiJiNjBiNGI4YjUzMTczZGY2MzVhMmEzZWQzYmEyYTI1ZSJ9.dKQYziE9NPrsFYz-QheLp4GrjW2k7e6O1_D_3H3MHD9o4JFhlO11ynL_dKhXcqM7YKVWGIh9Gp_EyDfN8y2tbg
 
 
-## Installation
+## Replication of Manuscript Results
 
 ### Option 1: Replicate the results of the paper within this Google Colab environment.
 
@@ -167,7 +174,20 @@ jupyter notebook
 
 9. Run the Jupyter notebook to replicate the results of the paper.
 
-***
+****
+
+## Utilizing Trained Models for Prediction
+
+### Option 1: Use the pre-trained models to predict bioactivity of natural products in model folder.
+
+- The model folder contains the best performing pre-trained model pickled using joblib. The model can be loaded into python.
+
+
+### Option 2: Train your own models using the provided data.
+
+- The data used to train the models is available on the Zenodo repository. You can use this data to train your own models using the provided Jupyter notebook or your own scripts.
+
+****
 
 Dataset
 
