@@ -25,7 +25,7 @@ Bioactivity Classification: Demonstrates the utility of pharmacophore-based clas
 - The models outperformed traditional classification tools, especially in predicting polyene macrolides and other antifungal drug classes.
 
 ## Zenodo Repository for all training and evaluation datasets.
-### https://zenodo.org/records/13921667?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6Ijc3YjJhNDZlLTU4MTctNDYwNy04OTBlLTk2MDUwOGRlMDlmOCIsImRhdGEiOnt9LCJyYW5kb20iOiJiNjBiNGI4YjUzMTczZGY2MzVhMmEzZWQzYmEyYTI1ZSJ9.dKQYziE9NPrsFYz-QheLp4GrjW2k7e6O1_D_3H3MHD9o4JFhlO11ynL_dKhXcqM7YKVWGIh9Gp_EyDfN8y2tbg
+https://zenodo.org/records/13921667?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6Ijc3YjJhNDZlLTU4MTctNDYwNy04OTBlLTk2MDUwOGRlMDlmOCIsImRhdGEiOnt9LCJyYW5kb20iOiJiNjBiNGI4YjUzMTczZGY2MzVhMmEzZWQzYmEyYTI1ZSJ9.dKQYziE9NPrsFYz-QheLp4GrjW2k7e6O1_D_3H3MHD9o4JFhlO11ynL_dKhXcqM7YKVWGIh9Gp_EyDfN8y2tbg
 
 
 ## Installation
@@ -71,7 +71,7 @@ pip install -r requirements.txt
 
 7. Change the file paths in the Jupyter notebook to match the location of the data files on your system.
 
-8. Run the Jupyter notebook
+8. Start the Jupyter notebook
 ```
 jupyter notebook
 ```
