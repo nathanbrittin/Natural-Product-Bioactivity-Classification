@@ -2,6 +2,41 @@
 ## Overview
 This repository contains the data and Python scripts used in the research project titled "Machine Learning-based Bioactivity Classification of Natural Products Using LC-MS/MS Metabolomics". The project focuses on developing a machine learning (ML) framework to characterize the bioactivity of natural products by leveraging LC-MS/MS metabolomics data. This research aims to address the challenge of rediscovery in natural products drug discovery by utilizing in-silico-generated molecular fingerprints (MFPs) to classify compounds based on their core pharmacophores.
 
+<!-- Insert Picture -->
+![Bioactivity Classification of Natural Products Using LC-MS/MS Metabolomics Workflow](/figures/Figure_2_project_workflow.png)
+
+This figure outlines the end-to-end workflow used to generate in-silico fragmentation spectra, molecular fingerprints (MFPs), and apply machine learning (ML) models for bioactivity classification of natural products.
+
+### 1. Input Structures:
+
+- The process begins with chemical structures of natural products obtained from public databases such as PubChem. 
+
+### 2. In-Silico MS Fragmentation:
+
+- Structures are fragmented using Mass Frontier 8.1 to simulate LC-MS/MS fragmentation spectra.
+
+- This step replicates the experimental breakdown of molecules to generate realistic spectra.
+
+### 3. Molecular Fingerprint Generation:
+
+- The fragmented spectra are processed using SIRIUS 5, which converts the spectral data into molecular fingerprints (MFPs). These fingerprints act as condensed representations of the compounds' structural features.
+
+### 4. Training Machine Learning Models:
+
+- The generated MFPs are used as training data for several ML classifiers (e.g., Support Vector Classifier, Logistic Regression, etc.).
+
+- Training data consists of both positive examples (bioactive compounds) and negative examples (non-bioactive or unrelated compounds).
+
+### 5. Testing and Evaluation:
+
+- The trained models are evaluated on held-out test sets to ensure generalizability.
+
+- Additional testing is conducted on experimental spectra from the GNPS repository to confirm the models' performance on real-world data.
+
+### 6. Classification and Application:
+
+- The trained models are applied to identify bioactive compounds, particularly in complex bacterial extracts, focusing on biologically relevant pharmacophore-based classification.
+
 ## Key Features
 Machine Learning Framework: Developed to classify compounds into 23 diverse bioactive drug classes, achieving >93% accuracy on experimental spectra.
 Molecular Fingerprints (MFPs): Created using SIRIUS 5 and in-silico generated fragmentation spectra to enable classification of natural products even without reference experimental spectra.
@@ -81,11 +116,13 @@ jupyter notebook
 ***
 
 Dataset
+
 The dataset used for training and testing consists of in-silico generated molecular fingerprints for 23 bioactive drug classes and GNPS spectra from real-world experimental data. These fingerprints were processed using SIRIUS 5 from Mass Frontier generated MS/MS spectra.
 
 Citation
+
 If you use this repository in your research, please cite:
-Brittin, N., et al. (2022). Machine Learning-based Bioactivity Classification of Natural Products Using LC-MS/MS Metabolomics.
+Brittin, N., et al. (2024). Machine Learning-based Bioactivity Classification of Natural Products Using LC-MS/MS Metabolomics.
 
 ****
 
@@ -93,4 +130,4 @@ License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Acknowledgements
-We acknowledge the support of the National Institutes of Health and the University of Wisconsin-Madison for providing the facilities to acquire the necessary mass spectrometry data.
+We acknowledge the support of the National Institutes of Health and the University of Wisconsin-Madison for providing the facilities to acquire the necessary mass spectrometry data. Additionally, we thank the developers of SIRIUS, and scikit-learn for their contributions to the field of metabolomics and machine learning.
