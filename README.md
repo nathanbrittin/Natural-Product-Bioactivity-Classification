@@ -24,12 +24,12 @@ Bioactivity Classification: Demonstrates the utility of pharmacophore-based clas
 - Classification models achieve over 93% accuracy, with low false-positive rates across all drug classes.
 - The models outperformed traditional classification tools, especially in predicting polyene macrolides and other antifungal drug classes.
 
-Repository Structure
-
-****
+## Zenodo Repository for all training and evaluation datasets.
+### https://zenodo.org/records/13921667?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6Ijc3YjJhNDZlLTU4MTctNDYwNy04OTBlLTk2MDUwOGRlMDlmOCIsImRhdGEiOnt9LCJyYW5kb20iOiJiNjBiNGI4YjUzMTczZGY2MzVhMmEzZWQzYmEyYTI1ZSJ9.dKQYziE9NPrsFYz-QheLp4GrjW2k7e6O1_D_3H3MHD9o4JFhlO11ynL_dKhXcqM7YKVWGIh9Gp_EyDfN8y2tbg
 
 Installation
-Clone the repository:
+
+### 1. Download
 
 ****
 
