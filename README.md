@@ -35,6 +35,8 @@ This figure outlines the end-to-end workflow used to generate in-silico fragment
 
     - The intensity of each fragment is simply a descending integer beginning at 100 for the smallest fragment and decreasing by 1 for each subsequent fragment. This does not impact the molecular fingerprint prediction done by SIRIUS 5 as shown in Supplemental Figure 1. Molecular fingerprints are generated irrespective of the intensity of the fragments, or so we have observed.
 
+![Figure 2: Spectra intensity](/figures/supp_fig_1_spectral_intensity_impact.png)
+
 ### 3. Molecular Fingerprint Generation:
 
 - The fragmented spectra are processed using SIRIUS 5, which converts the spectral data into molecular fingerprints (MFPs) by generating a fragmentation tree and analyzing the pattern to predict the presence of 3,778 different substructures or properties. These fingerprints act as condensed representations of the compounds' structural features.
@@ -52,7 +54,8 @@ This figure outlines the end-to-end workflow used to generate in-silico fragment
     - The sets are split into training and testing data using an 80/20 split.
 
 <!-- Figure of class distributions -->
-![Figure 2: Class Distribution](/figures/supp_fig_1_spectral_intensity_impact.png)
+![Figure: Class Distribution](/figures/figure_class_distribution.png)
+
 - The class distribution of the dataset is shown in Figure 2. The dataset is imbalanced, with some classes having significantly fewer examples than others. This imbalance is addressed using class weights in the ML model training.
 
 - A variety of ML models are trained and evaluated using cross-validation to determine the best-performing model for bioactivity classification.
