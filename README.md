@@ -2,8 +2,10 @@
 ## Overview
 This repository contains the data and Python scripts used in the research project titled "Machine Learning-based Bioactivity Classification of Natural Products Using LC-MS/MS Metabolomics". The project focuses on developing a machine learning (ML) framework to characterize the bioactivity of natural products by leveraging LC-MS/MS metabolomics data. This research aims to address the challenge of rediscovery in natural products drug discovery by utilizing in-silico-generated molecular fingerprints (MFPs) to classify compounds based on their core pharmacophores.
 
+****
 <!-- Insert Picture -->
 ![Figure 1: Bioactivity Classification of Natural Products Using LC-MS/MS Metabolomics Workflow](/figures/Figure_2_project_workflow.png)
+****
 
 This figure outlines the end-to-end workflow used to generate in-silico fragmentation spectra, molecular fingerprints (MFPs), and apply machine learning (ML) models for bioactivity classification of natural products.
 
@@ -35,8 +37,9 @@ This figure outlines the end-to-end workflow used to generate in-silico fragment
 
     - The intensity of each fragment is simply a descending integer beginning at 100 for the smallest fragment and decreasing by 1 for each subsequent fragment. This does not impact the molecular fingerprint prediction done by SIRIUS 5 as shown in Supplemental Figure 1. Molecular fingerprints are generated irrespective of the intensity of the fragments, or so we have observed.
 
+****
 ![Figure 2: Spectra intensity](/figures/supp_fig_1_spectral_intensity_impact.png)
-
+****
 ### 3. Molecular Fingerprint Generation:
 
 - The fragmented spectra are processed using SIRIUS 5, which converts the spectral data into molecular fingerprints (MFPs) by generating a fragmentation tree and analyzing the pattern to predict the presence of 3,778 different substructures or properties. These fingerprints act as condensed representations of the compounds' structural features.
@@ -54,7 +57,9 @@ This figure outlines the end-to-end workflow used to generate in-silico fragment
     - The sets are split into training and testing data using an 80/20 split.
 
 <!-- Figure of class distributions -->
-![Figure: Class Distribution](/figures/figure_class_distribution.png)
+****
+![Figure: Class Distribution](/figures/figure_class_distribution.png|width=500)
+****
 
 - The class distribution of the dataset is shown in Figure 2. The dataset is imbalanced, with some classes having significantly fewer examples than others. This imbalance is addressed using class weights in the ML model training.
 
