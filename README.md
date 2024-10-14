@@ -6,6 +6,7 @@ This repository contains the data and Python scripts used in the research projec
 <!-- Insert Picture -->
 <!-- ![Figure 1: Bioactivity Classification of Natural Products Using LC-MS/MS Metabolomics Workflow](/figures/Figure_2_project_workflow.png) -->
 <img src="/figures/Figure_2_project_workflow.png">
+
 ****
 
 This figure outlines the end-to-end workflow used to generate in-silico fragmentation spectra, molecular fingerprints (MFPs), and apply machine learning (ML) models for bioactivity classification of natural products.
@@ -39,8 +40,10 @@ This figure outlines the end-to-end workflow used to generate in-silico fragment
     - The intensity of each fragment is simply a descending integer beginning at 100 for the smallest fragment and decreasing by 1 for each subsequent fragment. This does not impact the molecular fingerprint prediction done by SIRIUS 5 as shown in Supplemental Figure 1. Molecular fingerprints are generated irrespective of the intensity of the fragments, or so we have observed.
 
 ****
+
 <!-- ![Figure 2: Spectra intensity](/figures/supp_fig_1_spectral_intensity_impact.png) -->
 <img src="/figures/supp_fig_1_spectral_intensity_impact.png" width="800">
+
 ****
 ### 3. Molecular Fingerprint Generation:
 
@@ -49,6 +52,13 @@ This figure outlines the end-to-end workflow used to generate in-silico fragment
     - For all fingerprint sets, only the known molecular formulae were used to generate the MFPs. This is to avoid the variation in structural data that can be introduced by predicting incorrect molecular formulae.
 
 - The generated MFPs are compiled into a dataset for training and testing machine learning models.
+
+****
+
+<img src=/figures/tsne_in-silico_and_gnps.png>
+
+****
+- The t-SNE plot shows the distribution of in-silico generated MFPs (cirlces) and GNPS MFPs (triangles) in a 2D space. The MFPs, when post-labelled with their drug classes are distincly clustered based on their classes pharmacophore, with each class clustering separately from each other. Additionally, the in-silico MFPs and the GNPS MFPs cluster very close to one another indicating that the structural information in the in-silico fingerprints is very similar to the experimental fingerprints. This separation of classes and grouping of in-silico and experimental indicated that the in-silico generated MFPs capture unique structural features that can be used for bioactivity classification of experimental data.
 
 ### 4. Training Machine Learning Models:
 
@@ -61,7 +71,7 @@ This figure outlines the end-to-end workflow used to generate in-silico fragment
 <!-- Figure of class distributions -->
 ****
 <!-- ![Figure: Class Distribution](/figures/figure_class_distribution.png|width=500) -->
-<img src="/figures/figure_class_distribution.png" width="500">
+<img src="/figures/figure_class_distribution.png" width="600">
 ****
 
 - The class distribution of the dataset is shown in Figure 2. The dataset is imbalanced, with some classes having significantly fewer examples than others. This imbalance is addressed using class weights in the ML model training.
@@ -72,7 +82,10 @@ This figure outlines the end-to-end workflow used to generate in-silico fragment
 
 - The trained models are evaluated on held-out test sets to ensure generalizability.
 
-- Additional testing is conducted on experimental spectra from the GNPS repository to confirm the models' performance on real-world data.
+****
+
+
+- Testing is also conducted on experimental spectra from the GNPS repository to confirm the models' performance on real-world data. Demonstrating that the models, fully trained on in-silico data, can be applied to experimental data with high performance.
 
 ### 6. Classification and Application:
 
