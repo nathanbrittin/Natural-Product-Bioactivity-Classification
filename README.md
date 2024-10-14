@@ -4,7 +4,8 @@ This repository contains the data and Python scripts used in the research projec
 
 ****
 <!-- Insert Picture -->
-![Figure 1: Bioactivity Classification of Natural Products Using LC-MS/MS Metabolomics Workflow](/figures/Figure_2_project_workflow.png)
+<!-- ![Figure 1: Bioactivity Classification of Natural Products Using LC-MS/MS Metabolomics Workflow](/figures/Figure_2_project_workflow.png) -->
+<img src="/figures/Figure_2_project_workflow.png">
 ****
 
 This figure outlines the end-to-end workflow used to generate in-silico fragmentation spectra, molecular fingerprints (MFPs), and apply machine learning (ML) models for bioactivity classification of natural products.
@@ -38,7 +39,8 @@ This figure outlines the end-to-end workflow used to generate in-silico fragment
     - The intensity of each fragment is simply a descending integer beginning at 100 for the smallest fragment and decreasing by 1 for each subsequent fragment. This does not impact the molecular fingerprint prediction done by SIRIUS 5 as shown in Supplemental Figure 1. Molecular fingerprints are generated irrespective of the intensity of the fragments, or so we have observed.
 
 ****
-![Figure 2: Spectra intensity](/figures/supp_fig_1_spectral_intensity_impact.png)
+<!-- ![Figure 2: Spectra intensity](/figures/supp_fig_1_spectral_intensity_impact.png) -->
+<img src="/figures/supp_fig_1_spectral_intensity_impact.png" width="800">
 ****
 ### 3. Molecular Fingerprint Generation:
 
@@ -58,7 +60,8 @@ This figure outlines the end-to-end workflow used to generate in-silico fragment
 
 <!-- Figure of class distributions -->
 ****
-![Figure: Class Distribution](/figures/figure_class_distribution.png|width=500)
+<!-- ![Figure: Class Distribution](/figures/figure_class_distribution.png|width=500) -->
+<img src="/figures/figure_class_distribution.png" width="500">
 ****
 
 - The class distribution of the dataset is shown in Figure 2. The dataset is imbalanced, with some classes having significantly fewer examples than others. This imbalance is addressed using class weights in the ML model training.
