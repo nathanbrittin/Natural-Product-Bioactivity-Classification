@@ -40,17 +40,17 @@ Bioactivity Classification: Demonstrates the utility of pharmacophore-based clas
 
 1. Prerequisites
 
-Before you begin, ensure you have the following installed:
+    Before you begin, ensure you have the following installed:
 
-Python 3.9.13 (Other versions may cause compatibility issues.)
-pip (Python package installer)
-If you don’t have Python installed, you can download it here.
+    Python 3.9.13 (Other versions may cause compatibility issues.)
+    pip (Python package installer)
+    If you don’t have Python installed, you can download it here.
 
 2. Installation
-'''
+```
 git clone https://github.com/nathanbrittin/Natural-Product-Bioactivity-Classification.git
 cd Natural-Product-Bioactivity-Classification
-'''
+```
 
 3. Initiate virtual environment (Optional, but recommended for managing dependencies)
 ```
