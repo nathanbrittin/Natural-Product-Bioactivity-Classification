@@ -27,22 +27,65 @@ Bioactivity Classification: Demonstrates the utility of pharmacophore-based clas
 ## Zenodo Repository for all training and evaluation datasets.
 ### https://zenodo.org/records/13921667?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6Ijc3YjJhNDZlLTU4MTctNDYwNy04OTBlLTk2MDUwOGRlMDlmOCIsImRhdGEiOnt9LCJyYW5kb20iOiJiNjBiNGI4YjUzMTczZGY2MzVhMmEzZWQzYmEyYTI1ZSJ9.dKQYziE9NPrsFYz-QheLp4GrjW2k7e6O1_D_3H3MHD9o4JFhlO11ynL_dKhXcqM7YKVWGIh9Gp_EyDfN8y2tbg
 
-Installation
 
-### 1. Download
+## Installation
 
-****
+### Option 1: Replicate the results of the paper within this Google Colab environment.
 
-Usage
-To train and test the models, run the following command:
+- https://colab.research.google.com/drive/14VnBaJrp-LIpIyPne_DUE_PxeRlGYaB-?usp=sharing
 
-****
+- Open Collab notebook and run all cells to generate model results from the data available on the Zenodo repository.
+
+### Option 2: Execute the code locally (Windows).
+
+1. Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+Python 3.9.13 (Other versions may cause compatibility issues.)
+pip (Python package installer)
+If you don’t have Python installed, you can download it here.
+
+2. Installation
+'''
+git clone https://github.com/nathanbrittin/Natural-Product-Bioactivity-Classification.git
+cd Natural-Product-Bioactivity-Classification
+'''
+
+3. Initiate virtual environment (Optional, but recommended for managing dependencies)
+'''
+python3.9 -m venv venv
+'''
+
+4. Activate the virtual environment
+'''
+source venv/bin/activate
+'''
+
+5. Install the required packages
+'''
+pip install -r requirements.txt
+'''
+
+6. Download the data from the Zenodo repository and place it in the same directory as the Jupyter notebook.
+
+7. Change the file paths in the Jupyter notebook to match the location of the data files on your system.
+
+8. Run the Jupyter notebook
+'''
+jupyter notebook
+'''
+
+9. Run the Jupyter notebook to replicate the results of the paper.
+
+***
 
 Dataset
 The dataset used for training and testing consists of in-silico generated molecular fingerprints for 23 bioactive drug classes and GNPS spectra from real-world experimental data. These fingerprints were processed using SIRIUS 5 from Mass Frontier generated MS/MS spectra.
 
 Citation
 If you use this repository in your research, please cite:
+Brittin, N., et al. (2022). Machine Learning-based Bioactivity Classification of Natural Products Using LC-MS/MS Metabolomics.
 
 ****
 
