@@ -53,28 +53,28 @@ cd Natural-Product-Bioactivity-Classification
 '''
 
 3. Initiate virtual environment (Optional, but recommended for managing dependencies)
-'''
+```
 python3.9 -m venv venv
-'''
+```
 
 4. Activate the virtual environment
-'''
+```
 source venv/bin/activate
-'''
+```
 
 5. Install the required packages
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 6. Download the data from the Zenodo repository and place it in the same directory as the Jupyter notebook.
 
 7. Change the file paths in the Jupyter notebook to match the location of the data files on your system.
 
 8. Run the Jupyter notebook
-'''
+```
 jupyter notebook
-'''
+```
 
 9. Run the Jupyter notebook to replicate the results of the paper.
 
